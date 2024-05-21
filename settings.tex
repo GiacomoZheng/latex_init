@@ -1,0 +1,53 @@
+\author{Renpeng Zheng}
+\address{School of Mathematical Sciences\\University of Nottingham\\Nottingham\\NG7 2RD\\United Kingdom}
+\email{Renpeng.Zheng@Nottingham.ac.uk}
+
+% ---------------------------------
+% setups
+% ---------------------------------
+
+%% for \over
+\makeatletter
+\let\over\@@over
+\makeatother
+
+%% for (), [] and \{\}
+\def\oparen{\left\lparen} \def\cparen{\right\rparen} % ()
+\def\obrack{\left\lbrack} \def\cbrack{\right\rbrack} % []
+\def\{{\left\lbrace} \def\}{\right\rbrace} % \{\}
+{
+  \catcode`\(=13 \gdef({\oparen} \catcode`\)=13 \gdef){\cparen}
+  \catcode`\[=13 \gdef[{\obrack} \catcode`\]=13 \gdef]{\cbrack}
+}
+\everydisplay={
+  \catcode`\(=13 \catcode`\)=13 \catcode`\[=13 \catcode`\]=13
+}
+
+%% for amsmath tilte
+\let\origmaketitle\maketitle
+\def\maketitle{
+  \begingroup
+  \def\uppercasenonmath##1{} % this disables uppercasing title
+  \let\MakeUppercase\relax % this disables uppercasing authors
+  \origmaketitle
+  \endgroup
+}
+
+% ---------------------------------
+% Packages
+% ---------------------------------
+\usepackage{mathtools}
+\usepackage{hyperref}
+\def\Itemautorefname{Item}
+\def\chapterautorefname{Chapter}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Section}
+\def\subsubsectionautorefname{Section}
+\def\paragraphautorefname{Paragraph}
+\def\Hfootnoteautorefname{Footnote}
+
+\RequirePackage{comment}
+\begin{outputonly}
+	\usepackage[style=alphabetic]{biblatex}
+	\addbibresource{ref.bib}
+\end{outputonly}

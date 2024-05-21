@@ -1,2 +1,2 @@
-# latex_init
+# LaTeX init
  my snippets for latex
