@@ -28,6 +28,9 @@ else
     # 复制settings.tex文件到当前目录
     cp $source/settings.tex ./
     echo "settings.tex has been copied to the current folder."
+    mkdir ./lib
+    mkdir ./lib/apx
+    touch ./lib/apx/_.tex
 fi
 
 ############################################################
