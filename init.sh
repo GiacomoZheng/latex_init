@@ -31,6 +31,7 @@ else
     mkdir ./lib
     mkdir ./lib/apx
     touch ./lib/apx/_.tex
+    touch ./lib/intro.tex
 fi
 
 ############################################################

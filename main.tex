@@ -13,14 +13,24 @@
 
 \pagestyle{headings}
 
-% -------------------------------------------------
+% -------------------------------------------
 
 \begin{document}
-\begin{abstract}
-	TODO 
-\end{abstract}
+
 \maketitle
-TODO
+\begin{abstract}
+	TODO
+\end{abstract}
+\begin{abstractZH}
+	TODO
+\end{abstractZH}
+
+
+\section*{Introduction}\label{sec:intro}
+\begingroup
+  \renewcommand{\thetheorem}{(\Alph{theorem})}
+  \input{./lib/intro.tex}
+\endgroup
 
 \appendix
 \input{lib/apx/_.tex}
